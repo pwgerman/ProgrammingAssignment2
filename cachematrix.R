@@ -5,23 +5,26 @@
 ## than computing it repeatedly.  This pair of functions can 
 ## cache the inverse of a matrix.
 ##
-## EXAMPLE:
+## EXAMPLE: show product of matrix and its inverse is identity matrix
 ##    M = rbind(c(4, 3), c(3, 2))
 ##    M
 ##            [,1] [,2]
 ##        [1,]    4    3
 ##        [2,]    3    2
+##
 ##    cacheM <- makeCacheMatrix(M)
 ##    cacheM$get()
 ##            [,1] [,2]
 ##        [1,]    4    3
 ##        [2,]    3    2
-##    invM = cacheSolve(cacheM)
+##
+##    invM <- cacheSolve(cacheM)
 ##    invM
 ##            [,1] [,2]
 ##        [1,]   -2    3
 ##        [2,]    3   -4
-##    M %*% invM            ## %*% is R matrix multiplication
+##
+##    M %*% invM          ## %*% is R matrix multiplication operator
 ##            [,1] [,2]
 ##        [1,]    1    0
 ##        [2,]    0    1
