@@ -7,7 +7,20 @@
 ## object that can cache its inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
-
+    ## first, clear cache so new inverse will be calculated
+    inv <- NULL
+    ## next, assign functions to variables: set, get, setinv, getinv
+    set <- function(y) {
+        x <<- y
+        inv <<- NULL
+    }
+    get <- function() x
+    setinv <- function(inverse) inv <<- inverse
+    getinv <- function() inv
+    ## finally, return a list: $index = function()
+    list(set = set, get = get,
+         setinv = setinv,
+         getinv = getinv)
 }
 
 
