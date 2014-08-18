@@ -6,6 +6,7 @@
 ## cache the inverse of a matrix.
 ##
 ## EXAMPLE: show product of matrix and its inverse is identity matrix
+##    source('cachematrix.R')       ## read function code into R
 ##    M = rbind(c(4, 3), c(3, 2))
 ##    M
 ##            [,1] [,2]
